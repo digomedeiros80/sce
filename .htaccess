@@ -1,0 +1,19 @@
+# =====================================================================
+# PROJETO: SCE - Sistema de Controle de Empréstimos de Equipamentos
+# ARQUIVO: .htaccess (Raiz do Projeto)
+# DESCRIÇÃO: Redireciona o acesso direto de /sce para /sce/public/
+# e protege pastas internas como app, config, database, storage e docs
+# =====================================================================
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Redireciona acesso à raiz da pasta para /public/
+    RewriteRule ^$ public/ [L]
+    RewriteRule (.*) public/$1 [L]
+</IfModule>
+
+# Bloqueia acesso a arquivos ocultos (.env, .git, etc)
+<FilesMatch "^\.">
+    Require all denied
+</FilesMatch>

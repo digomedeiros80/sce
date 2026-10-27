@@ -1,0 +1,393 @@
+/*
+ * =====================================================================
+ * PROJETO: SCE - Sistema de Controle de Empréstimos de Equipamentos
+ * ARQUIVO: public/assets/css/custom.css
+ * DESCRIÇÃO: Estilos customizados complementares com identidade visual SaaS moderna
+ * PALETA: Azul Principal (#2563EB), Azul Escuro (#1E3A8A), Fundo (#F3F4F6)
+ * =====================================================================
+ */
+
+:root {
+    --sce-primary: #2563EB;
+    --sce-primary-dark: #1E3A8A;
+    --sce-dark: #1F2937;
+    --sce-light: #F3F4F6;
+    --sce-white: #FFFFFF;
+    --sce-success: #16A34A;
+    --sce-danger: #DC2626;
+    --sce-warning: #F59E0B;
+    --sidebar-width: 260px;
+}
+
+body {
+    font-family: 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--sce-light);
+    color: var(--sce-dark);
+    min-height: 100vh;
+}
+
+/* Layout Wrapper */
+.app-wrapper {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* Sidebar Styles */
+.app-sidebar {
+    width: var(--sidebar-width);
+    background-color: var(--sce-dark);
+    color: #E5E7EB;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease-in-out;
+    z-index: 1030;
+}
+
+.sidebar-header {
+    height: 64px;
+    display: flex;
+    align-items: center;
+    padding: 0 1.25rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.sidebar-brand {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.sidebar-brand .brand-badge {
+    background: var(--sce-primary);
+    color: #fff;
+    padding: 0.2rem 0.5rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+}
+
+.sidebar-nav {
+    flex-grow: 1;
+    padding: 1rem 0.75rem;
+    overflow-y: auto;
+}
+
+.nav-section-title {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #9CA3AF;
+    padding: 0.5rem 0.75rem;
+    font-weight: 600;
+}
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.7rem 0.85rem;
+    color: #D1D5DB;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 0.92rem;
+    transition: all 0.2s ease;
+    margin-bottom: 0.25rem;
+}
+
+.sidebar-link i {
+    font-size: 1.15rem;
+    color: #9CA3AF;
+    transition: color 0.2s;
+}
+
+.sidebar-link:hover {
+    background-color: rgba(255, 255, 255, 0.07);
+    color: #FFFFFF;
+}
+
+.sidebar-link:hover i {
+    color: #60A5FA;
+}
+
+.sidebar-link.active {
+    background-color: var(--sce-primary);
+    color: #FFFFFF;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+}
+
+.sidebar-link.active i {
+    color: #FFFFFF;
+}
+
+.sidebar-footer {
+    padding: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Main Content Area */
+.app-main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+/* Header Navbar */
+.app-header {
+    height: 64px;
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #E5E7EB;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+}
+
+.content-body {
+    padding: 1.75rem 1.5rem;
+    flex-grow: 1;
+}
+
+/* Modern Card Styling */
+.card-saas {
+    background: #FFFFFF;
+    border-radius: 12px;
+    border: 1px solid #E5E7EB;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.card-saas:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.card-header-clean {
+    background: transparent;
+    border-bottom: 1px solid #F3F4F6;
+    padding: 1.15rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Metric / KPI Cards */
+.metric-card {
+    padding: 1.35rem;
+    display: flex;
+    align-items: center;
+    border-radius: 12px;
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    position: relative;
+    overflow: hidden;
+}
+
+.metric-icon-box {
+    width: 52px;
+    height: 52px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    margin-right: 1.15rem;
+}
+
+.metric-info h6 {
+    font-size: 0.85rem;
+    color: #6B7280;
+    margin-bottom: 0.25rem;
+    font-weight: 500;
+}
+
+.metric-info h3 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--sce-dark);
+    margin: 0;
+}
+
+/* Status Badges */
+.badge-status {
+    padding: 0.35rem 0.65rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.78rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.badge-disponivel {
+    background-color: #DCFCE7;
+    color: #15803D;
+}
+
+.badge-emprestado {
+    background-color: #DBEAFE;
+    color: #1D4ED8;
+}
+
+.badge-manutencao {
+    background-color: #FEF3C7;
+    color: #B45309;
+}
+
+.badge-inativo {
+    background-color: #F3F4F6;
+    color: #4B5563;
+}
+
+.badge-atrasado {
+    background-color: #FEE2E2;
+    color: #B91C1C;
+    animation: pulse-danger 2s infinite;
+}
+
+.badge-devolvido {
+    background-color: #E0E7FF;
+    color: #4338CA;
+}
+
+@keyframes pulse-danger {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.75; }
+}
+
+/* Form Styles */
+.form-label {
+    font-weight: 500;
+    font-size: 0.88rem;
+    color: #374151;
+    margin-bottom: 0.35rem;
+}
+
+.form-control, .form-select {
+    border-radius: 8px;
+    border: 1px solid #D1D5DB;
+    padding: 0.55rem 0.85rem;
+    font-size: 0.92rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--sce-primary);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* Buttons */
+.btn-sce {
+    background-color: var(--sce-primary);
+    color: #FFFFFF;
+    border-radius: 8px;
+    font-weight: 500;
+    padding: 0.55rem 1.15rem;
+    border: none;
+    transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+.btn-sce:hover {
+    background-color: var(--sce-primary-dark);
+    color: #FFFFFF;
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.25);
+}
+
+/* Tables */
+.table-modern {
+    margin-bottom: 0;
+}
+
+.table-modern thead th {
+    background-color: #F9FAFB;
+    color: #4B5563;
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+    padding: 0.85rem 1rem;
+    border-bottom: 1px solid #E5E7EB;
+}
+
+.table-modern tbody td {
+    padding: 0.85rem 1rem;
+    vertical-align: middle;
+    font-size: 0.9rem;
+    border-bottom: 1px solid #F3F4F6;
+}
+
+.table-modern tbody tr:hover {
+    background-color: #F8FAFC;
+}
+
+/* Print CSS */
+@media print {
+    .app-sidebar, .app-header, .btn, .no-print, .pagination, .alert {
+        display: none !important;
+    }
+    .app-wrapper {
+        display: block !important;
+    }
+    .app-main {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    .content-body {
+        padding: 0 !important;
+    }
+    .card-saas {
+        border: none !important;
+        box-shadow: none !important;
+    }
+    .table-modern thead th {
+        background-color: #eee !important;
+        color: #000 !important;
+    }
+    body {
+        background: #FFFFFF !important;
+        font-size: 11pt !important;
+    }
+    .print-only-header {
+        display: block !important;
+        margin-bottom: 1.5rem;
+    }
+}
+
+.print-only-header {
+    display: none;
+}
+
+/* Mobile Sidebar Toggle */
+@media (max-width: 991.98px) {
+    .app-sidebar {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: -260px;
+    }
+    .app-sidebar.show {
+        left: 0;
+        box-shadow: 4px 0 24px rgba(0, 0, 0, 0.3);
+    }
+    .sidebar-overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1025;
+    }
+    .sidebar-overlay.show {
+        display: block;
+    }
+}

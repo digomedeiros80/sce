@@ -1,0 +1,19 @@
+# =====================================================================
+# PROJETO: SCE - Sistema de Controle de Empréstimos de Equipamentos
+# ARQUIVO: public/.htaccess
+# DESCRIÇÃO: Reescrita de URLs para Front Controller index.php no Apache
+# =====================================================================
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Não reescrever requisições para arquivos e pastas físicas existentes
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+
+    # Redireciona todas as requisições restantes para o index.php
+    RewriteRule ^(.*)$ index.php [QSA,L]
+</IfModule>
+
+# Desativa listagem de arquivos nos diretórios
+Options -Indexes
